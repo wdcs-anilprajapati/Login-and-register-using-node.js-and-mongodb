@@ -10,11 +10,15 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(express.json());
 
-mongo.connect("mongodb://127.0.0.1:27017/signup-login")
-    .then(con => {
-        console.log('connected with mongoose');
-    })
-    .catch(err => console.log(err));
+const dbURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/signup-login";
+
+mongo.connect(dbURI)
+    .then(() => console.log('Connected to MongoDB @', dbURI))
+    .catch(err => {
+        console.error('Mongoose connection error:', err);
+        process.exit(1); // Exit with error so Docker knows it failed
+    });
+
 
 
 
