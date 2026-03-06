@@ -10,14 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(express.json());
 
-mongo
-    .connect(process.env.LINK, {
-
-
-    }).then(con => {
-        // console.log(con.connectaions);
-        console.log('connected with moongoses');
+mongo.connect("mongodb://127.0.0.1:27017/signup-login")
+    .then(con => {
+        console.log('connected with mongoose');
     })
+    .catch(err => console.log(err));
 
 
 
