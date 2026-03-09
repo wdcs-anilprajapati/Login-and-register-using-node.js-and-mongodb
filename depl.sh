@@ -1,12 +1,19 @@
 #!/bin/bash
 
-echo "hello"
+REPO_DIR="/var/www/Login-and-register-using-node.js-and-mongodb"
+COMPOSE_DIR="/var/www"
+LOG="/var/www/Login-and-register-using-node.js-and-mongodb/log.txt"
 
-echo "pull latest code"
-git pull
+cd $REPO_DIR || exit
+echo "pulling latest code..." >> $LOG
+git pull origin master >> $LOG 2>&1
 
-echo "stop all container"
-docker-compose down
+cd $COMPOSE_DIR || exit
+echo "stop cont" >> $LOG
+docker-compose down >> $LOG 2>&1
 
-echo "Rebuild container"
-docker-compose up -d --build
+echo "rebuild and up conatiner" >> $LOG
+docker-compose up -d --build >> $LOG 2>&1
+
+echo "Done." >> $LOG
+
