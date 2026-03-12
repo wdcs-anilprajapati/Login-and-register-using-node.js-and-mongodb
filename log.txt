@@ -708,3 +708,949 @@ Creating www_app_1    ...
 Creating www_app_1    ... done
 Creating www_client_1 ... done
 Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_db_1     ... 
+Removing www_client_1 ... 
+Removing www_client_1 ... done
+Removing www_app_1    ... done
+Removing www_db_1     ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> af2acdb45f0e
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 48f0d42e4589
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 14390574aa8f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> bdbd762b0a27
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> fbcb6638dceb
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> 08353e78a7d0
+Successfully built 08353e78a7d0
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.84MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 1c6acc3beed2
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 2a047b5f043f
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> d8eb40a22a4d
+Step 5/7 : COPY . .
+ ---> 645a392f945b
+Step 6/7 : EXPOSE 2000
+ ---> Running in f280d5473207
+ ---> Removed intermediate container f280d5473207
+ ---> 913d1f16b051
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in 05b92da8732b
+ ---> Removed intermediate container 05b92da8732b
+ ---> def8a7575d0f
+Successfully built def8a7575d0f
+Successfully tagged www_app:latest
+Creating www_client_1 ... 
+Creating www_db_1     ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_db_1     ... 
+Removing www_client_1 ... 
+Removing www_app_1    ... done
+Removing www_client_1 ... done
+Removing www_db_1     ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> af2acdb45f0e
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 48f0d42e4589
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 14390574aa8f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> bdbd762b0a27
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> fbcb6638dceb
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> 08353e78a7d0
+Successfully built 08353e78a7d0
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.84MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 1c6acc3beed2
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 2a047b5f043f
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> d8eb40a22a4d
+Step 5/7 : COPY . .
+ ---> 8216c3a5f47a
+Step 6/7 : EXPOSE 2000
+ ---> Running in caa19e622f7d
+ ---> Removed intermediate container caa19e622f7d
+ ---> c9af3bef1476
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in faa7aaee77d2
+ ---> Removed intermediate container faa7aaee77d2
+ ---> d6238a3162e5
+Successfully built d6238a3162e5
+Successfully tagged www_app:latest
+Creating www_client_1 ... 
+Creating www_db_1     ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... error
+
+ERROR: for www_client_1  Cannot start service client: failed to set up container networking: network www_default not found
+
+ERROR: for client  Cannot start service client: failed to set up container networking: network www_default not found
+Encountered errors while bringing up the project.
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_db_1     ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... done
+Removing www_app_1    ... done
+Removing www_client_1 ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> af2acdb45f0e
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 48f0d42e4589
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 14390574aa8f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> bdbd762b0a27
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> fbcb6638dceb
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> 08353e78a7d0
+Successfully built 08353e78a7d0
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.84MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 69b988752711
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 47e085f063ef
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> b0704edc8eea
+Step 5/7 : COPY . .
+ ---> 8c555acc38b4
+Step 6/7 : EXPOSE 2000
+ ---> Running in 96356c9b0a39
+ ---> Removed intermediate container 96356c9b0a39
+ ---> fb0aea0a1bcd
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in 45932694116d
+ ---> Removed intermediate container 45932694116d
+ ---> 1e75ad18608c
+Successfully built 1e75ad18608c
+Successfully tagged www_app:latest
+Creating www_db_1 ... 
+Creating www_client_1 ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Removing www_app_1    ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... 
+Removing www_app_1    ... done
+Removing www_db_1     ... done
+Removing www_client_1 ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> af2acdb45f0e
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 48f0d42e4589
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 14390574aa8f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> bdbd762b0a27
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> fbcb6638dceb
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> 08353e78a7d0
+Successfully built 08353e78a7d0
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.85MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 69b988752711
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 47e085f063ef
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> b0704edc8eea
+Step 5/7 : COPY . .
+ ---> 0832de647572
+Step 6/7 : EXPOSE 2000
+ ---> Running in a7d1fc981736
+ ---> Removed intermediate container a7d1fc981736
+ ---> 0896bb162938
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in dc22bacc26be
+ ---> Removed intermediate container dc22bacc26be
+ ---> f395eefeaba9
+Successfully built f395eefeaba9
+Successfully tagged www_app:latest
+Creating www_db_1 ... 
+Creating www_client_1 ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Removing network www_default
+Network www_default not found.
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+18-alpine: Pulling from library/node
+f18232174bc9: Pulling fs layer
+dd71dde834b5: Pulling fs layer
+1e5a4c89cee5: Pulling fs layer
+25ff2da83641: Pulling fs layer
+1e5a4c89cee5: Download complete
+f18232174bc9: Verifying Checksum
+f18232174bc9: Download complete
+f18232174bc9: Pull complete
+25ff2da83641: Verifying Checksum
+dd71dde834b5: Verifying Checksum
+dd71dde834b5: Download complete
+dd71dde834b5: Pull complete
+1e5a4c89cee5: Pull complete
+25ff2da83641: Pull complete
+Digest: sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+Status: Downloaded newer image for node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Running in 650be16540cf
+ ---> Removed intermediate container 650be16540cf
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Running in d0247fbc8b24
+[91mnpm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@firebase/app@0.14.9',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+[0m[91mnpm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@firebase/auth@1.12.1',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+[0m[91mnpm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@firebase/component@0.7.1',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+[0m[91mnpm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@firebase/logger@0.5.0',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+[0m[91mnpm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@firebase/util@1.14.0',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+[0m[91mnpm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+[0m[91mnpm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+[0m[91mnpm warn deprecated whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+[0m[91mnpm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+[0m[91mnpm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+[0m[91mnpm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+[0m[91mnpm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+[0m[91mnpm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[0m[91mnpm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+[0m[91mnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[0m[91mnpm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[0m[91mnpm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[0m[91mnpm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+[0m[91mnpm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+[0m[91mnpm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[0m[91mnpm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[0m[91mnpm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+[0m[91mnpm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+[0m[91mnpm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+[0m[91mnpm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+[0m
+added 1571 packages, and audited 1572 packages in 45s
+
+296 packages are looking for funding
+  run `npm fund` for details
+
+28 vulnerabilities (9 low, 5 moderate, 14 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[91mnpm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+npm notice To update run: npm install -g npm@11.11.0
+npm notice
+[0m ---> Removed intermediate container d0247fbc8b24
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Running in e6c2fb2aac02
+ ---> Removed intermediate container e6c2fb2aac02
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Running in 8a9dfa0d963a
+ ---> Removed intermediate container 8a9dfa0d963a
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Pulling db (mongo:latest)...
+latest: Pulling from library/mongo
+Digest: sha256:474f5c3bf0e355bb97dafda730e725169a4d51c5578abf7be9ec7ad3fdee4481
+Status: Downloaded newer image for mongo:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.86MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Running in b99bb72d13c3
+ ---> Removed intermediate container b99bb72d13c3
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Running in ed4ffe11a81c
+
+added 224 packages, and audited 225 packages in 7s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+23 vulnerabilities (8 low, 3 moderate, 11 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[91mnpm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+npm notice To update run: npm install -g npm@11.11.0
+npm notice
+[0m ---> Removed intermediate container ed4ffe11a81c
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> 11010c0b03a5
+Step 6/7 : EXPOSE 2000
+ ---> Running in 060f39ebbacd
+ ---> Removed intermediate container 060f39ebbacd
+ ---> c57456dd6702
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in d809c6762d38
+ ---> Removed intermediate container d809c6762d38
+ ---> 17091d8a59db
+Successfully built 17091d8a59db
+Successfully tagged www_app:latest
+Creating www_db_1 ... 
+Creating www_client_1 ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_client_1 ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... 
+Removing www_app_1    ... done
+Removing www_db_1     ... done
+Removing www_client_1 ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.86MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> 4dc0c5681160
+Step 6/7 : EXPOSE 2000
+ ---> Running in 6ea5a74db392
+ ---> Removed intermediate container 6ea5a74db392
+ ---> eecf54065b2c
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in b56dbcf3f99f
+ ---> Removed intermediate container b56dbcf3f99f
+ ---> e4eedc41fbb4
+Successfully built e4eedc41fbb4
+Successfully tagged www_app:latest
+Creating www_client_1 ... 
+Creating www_db_1     ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_client_1 ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... 
+Removing www_client_1 ... done
+Removing www_db_1     ... done
+Removing www_app_1    ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.86MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> 20b1a736538c
+Step 6/7 : EXPOSE 2000
+ ---> Running in e2ad55b2322d
+ ---> Removed intermediate container e2ad55b2322d
+ ---> d0f2ec6acaac
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in 31612bbdf31a
+ ---> Removed intermediate container 31612bbdf31a
+ ---> 61883a285d20
+Successfully built 61883a285d20
+Successfully tagged www_app:latest
+Creating www_client_1 ... 
+Creating www_db_1     ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_client_1 ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... 
+Removing www_app_1    ... done
+Removing www_db_1     ... done
+Removing www_client_1 ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.86MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> 97bba8344ff4
+Step 6/7 : EXPOSE 2000
+ ---> Running in 794f3c4431f4
+ ---> Removed intermediate container 794f3c4431f4
+ ---> 55d04cd0e966
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in 9f7d531c1c35
+ ---> Removed intermediate container 9f7d531c1c35
+ ---> d83f56e241bd
+Successfully built d83f56e241bd
+Successfully tagged www_app:latest
+Creating www_client_1 ... 
+Creating www_db_1     ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_db_1     ... 
+Removing www_client_1 ... 
+Removing www_app_1    ... done
+Removing www_client_1 ... done
+Removing www_db_1     ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.87MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> 29bda1710b8d
+Step 6/7 : EXPOSE 2000
+ ---> Running in 03f9a071d2c9
+ ---> Removed intermediate container 03f9a071d2c9
+ ---> 3e88462050a0
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in 8216fe19b068
+ ---> Removed intermediate container 8216fe19b068
+ ---> 9ba332b90888
+Successfully built 9ba332b90888
+Successfully tagged www_app:latest
+Creating www_db_1 ... 
+Creating www_client_1 ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
+pulling latest code...
+From github.com:wdcs-anilprajapati/Login-and-register-using-node.js-and-mongodb
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+stop cont
+Stopping www_app_1    ... 
+Stopping www_client_1 ... 
+Stopping www_db_1     ... 
+Stopping www_client_1 ... done
+Stopping www_app_1    ... done
+Stopping www_db_1     ... done
+Removing www_app_1    ... 
+Removing www_client_1 ... 
+Removing www_db_1     ... 
+Removing www_app_1    ... done
+Removing www_client_1 ... done
+Removing www_db_1     ... done
+Removing network www_default
+rebuild and up conatiner
+Creating network "www_default" with the default driver
+Building client
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  7.847MB
+Step 1/7 : FROM node:18-alpine
+18-alpine: Pulling from library/node
+Digest: sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+Status: Downloaded newer image for node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 5e04d1796f83
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 59c415200f1d
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> e00df885d40f
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> 1ff7f218331c
+Step 6/7 : EXPOSE 5173
+ ---> Using cache
+ ---> 76bd1f70f1bd
+Step 7/7 : CMD ["npm", "run", "dev", "--", "--host"]
+ ---> Using cache
+ ---> e44d16966c6d
+Successfully built e44d16966c6d
+Successfully tagged www_client:latest
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  30.87MB
+Step 1/7 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> a36ac0b9097c
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 6e6cb31b7311
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 693f5a59b910
+Step 5/7 : COPY . .
+ ---> b6b1e8f6767f
+Step 6/7 : EXPOSE 2000
+ ---> Running in cc315556307d
+ ---> Removed intermediate container cc315556307d
+ ---> e965352824e6
+Step 7/7 : CMD ["node", "server.js"]
+ ---> Running in da8f33bdd851
+ ---> Removed intermediate container da8f33bdd851
+ ---> 21e1653f099a
+Successfully built 21e1653f099a
+Successfully tagged www_app:latest
+Creating www_db_1 ... 
+Creating www_client_1 ... 
+Creating www_db_1     ... done
+Creating www_app_1    ... 
+Creating www_app_1    ... done
+Creating www_client_1 ... done
+Done.
