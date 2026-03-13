@@ -13,20 +13,19 @@ pipeline {
         }
         stage('build image') {
             steps {
-                sh 'docker build -t pipeline .'
+                sh 'docker build -t pipelines .'
                 echo 'building image'
             }
         }
         stage('remove container') {
             steps {
-                sh 'docker stop web3'
-                sh 'docker rm web3'
+                sh 'docker ps -q | xargs -r docker stop'
                 echo 'remove conatiner'
             }
         }
         stage('create new conatiner') {
             steps {
-                sh 'docker run -d -p 2009:2000 --name ikk pipeline'
+                sh 'docker run -d -p 2007:2000 --name oo pipelines'
                 echo 'creating container'
             }
         }
