@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build image') {
             steps {
-                sh 'docker build -t pipelines .'
+                sh 'docker build -t pipelines .
                 echo 'building image'
             }
         }
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('create new conatiner') {
             steps {
-                sh 'docker run -d -p 2007:2000 --name ani pipelines'
+                sh 'docker run -d -p 2007:2000 --name anile pipelines'
                 echo 'creating container'
             }
         }
