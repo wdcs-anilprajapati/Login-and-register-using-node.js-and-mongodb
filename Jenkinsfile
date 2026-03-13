@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build image') {
             steps {
-                sh 'docker build -t pipelines .
+                sh 'docker build -t pipelines .'
                 echo 'building image'
             }
         }
