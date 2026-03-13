@@ -25,7 +25,7 @@ pipeline {
         }
         stage('create new conatiner') {
             steps {
-                sh 'docker run -d -p 2007:2000 --name ani pipelinesd'
+                sh 'docker run -d -p 2007:2000 --name ani pipelines'
                 echo 'creating container'
             }
         }
