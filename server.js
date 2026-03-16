@@ -14,7 +14,9 @@ app.use(express.json());
 
 /* MongoDB Connection */
 /* Use container name "mongodb" instead of 127.0.0.1 */
-const dbURI = process.env.MONGO_URI || "mongodb://db:27017/signup-login";
+/* Use "mongodb" to match your running container name */
+const dbURI = process.env.MONGO_URI || "mongodb://mongodb:27017/signup-login";
+
 
 
 mongo.connect(dbURI, {
