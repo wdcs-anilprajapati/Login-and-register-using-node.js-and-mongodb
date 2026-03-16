@@ -1,6 +1,6 @@
 const Fields = require('./../Models/registerModle');
 const catchAsync = require('./../utils/catchAsync');
-// ADD THIS LINE BELOW TO FIX THE CRASH:
+// Make sure the filename case matches (appError vs AppError)
 const appError = require('./../utils/appError'); 
 
 exports.registerUser = catchAsync(async (req, res, next) => {
@@ -21,11 +21,9 @@ exports.login = async (req, res, next) => {
     if (!email || !password) {
         return next(new appError('please provide a email and password ', 400))
     }
-    const user = await Fields.findOne({
-        email: email
-    }).select('+password')
+    const user = await Fields.findOne({ email }).select('+password');
 
-    if (!user || ! await user.correctPassword(password, user.password)) {
+    if (!user || !(await user.correctPassword(password, user.password))) {
         return next(new appError('The email or password is incorrect ', 400))
     }
 
@@ -34,4 +32,5 @@ exports.login = async (req, res, next) => {
         mssg: 'You are logged in '
     })
 }
+
 
