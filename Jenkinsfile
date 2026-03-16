@@ -19,7 +19,7 @@ pipeline {
         }
         stage('remove container') {
             steps {
-                sh 'docker ps -q | xargs -r docker stop'
+                sh 'docker ps -q | xargs -r docker stop | xargs docker rm'
                 echo 'remove conatiner'
             }
         }
