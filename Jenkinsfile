@@ -25,8 +25,8 @@ pipeline {
         }
         stage('create new conatiner') {
             steps {
-                sh 'docker run -d --name mongodb --network my-app-net mongo'
-                sh 'docker run -d -p 2007:2000 --name aniled --network my-app-net pipelines'
+                sh 'docker run -d --name mongodb --network my-mongo-network mongo'
+                sh 'docker run -d -p 2007:2000 --name aniled --network my-mongo-network pipelines'
                 echo 'creating container'
             }
         }
